@@ -1,4 +1,5 @@
 export * from './components/Button/Button';
+export * from './components/Button/ButtonGroup';
 export * from './components/Input/Input';
 export * from './components/Label/Label';
 export * from './components/Switch/Switch';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export type RadioProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> & {
   label?: string;
@@ -20,13 +20,26 @@ const Dot = styled.input`
   accent-color: ${(p) => p.theme.colors.primary};
 `;
 
+const pop = keyframes`
+  0% { transform: scale(1); }
+  40% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+`;
+
+const LabelText = styled.span`
+  transition: transform ${(p) => p.theme.motion?.normal} ${(p) => p.theme.motion?.easeOut};
+  ${Dot}:checked + & {
+    animation: ${pop} ${(p) => p.theme.motion?.slow ?? '360ms'} ${(p) => p.theme.motion?.easeOut};
+  }
+`;
+
 export const Radio: React.FC<RadioProps> = ({ label, ...rest }) => {
   const input = <Dot type="radio" {...rest} />;
   if (!label) return input;
   return (
     <Wrapper>
       {input}
-      <span>{label}</span>
+      <LabelText>{label}</LabelText>
     </Wrapper>
   );
 };

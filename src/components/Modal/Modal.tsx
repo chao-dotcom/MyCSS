@@ -13,7 +13,7 @@ export type ModalProps = {
 const Backdrop = styled.div`
   position: fixed;
   inset: 0;
-  background: rgba(2, 8, 23, 0.30);
+  background: rgba(2, 8, 23, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;

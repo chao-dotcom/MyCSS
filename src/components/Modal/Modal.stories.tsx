@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import { Modal } from './Modal';
+import { Button } from '../Button/Button';
 import { ThemeProvider } from '../../theme/ThemeProvider';
 
 const meta: Meta<typeof Modal> = {
@@ -24,10 +25,9 @@ const ModalDemo = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <button onClick={() => setOpen(true)}>Open modal</button>
+      <Button onClick={() => setOpen(true)} colorScheme="green">Open modal</Button>
       <Modal open={open} onClose={() => setOpen(false)} title="Example Modal">
         <p style={{ marginBottom: 16 }}>This modal follows WCAG roles and traps focus.</p>
-        <button onClick={() => setOpen(false)}>Confirm</button>
       </Modal>
     </>
   );
