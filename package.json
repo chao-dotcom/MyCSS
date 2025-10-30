@@ -55,7 +55,7 @@
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-testing-library": "^6.4.0",
+    "eslint-plugin-testing-library": "^7.13.3",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "@storybook/addon-a11y": "^8.6.14",
