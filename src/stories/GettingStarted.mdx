@@ -1,0 +1,25 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Getting Started" />
+
+# Getting Started
+
+Install and setup the ThemeProvider to access tokens and components.
+
+```bash
+npm install my-design-system styled-components react react-dom
+```
+
+```tsx
+import { ThemeProvider, Button } from 'my-design-system';
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Button>Primary</Button>
+    </ThemeProvider>
+  );
+}
+```
+
+

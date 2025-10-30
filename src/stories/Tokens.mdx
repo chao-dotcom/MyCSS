@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/blocks';
+import React from 'react';
+import { lightTheme, darkTheme } from '../tokens/theme';
+
+<Meta title="Design/Tokens" />
+
+# Design Tokens
+
+## Colors
+
+Light theme:
+
+<div style={{ display: 'flex', gap: 12 }}>
+  {Object.entries(lightTheme.colors).map(([k, v]) => (
+    <div key={k} style={{ textAlign: 'center' }}>
+      <div style={{ width: 56, height: 40, background: v, border: '1px solid #ddd' }} />
+      <div style={{ fontSize: 12 }}>{k}</div>
+      <div style={{ fontSize: 12, color: '#666' }}>{v}</div>
+    </div>
+  ))}
+  
+</div>
+
+Dark theme:
+
+<div style={{ display: 'flex', gap: 12, background: '#111', padding: 8 }}>
+  {Object.entries(darkTheme.colors).map(([k, v]) => (
+    <div key={k} style={{ textAlign: 'center', color: '#eee' }}>
+      <div style={{ width: 56, height: 40, background: v, border: '1px solid #333' }} />
+      <div style={{ fontSize: 12 }}>{k}</div>
+      <div style={{ fontSize: 12, color: '#aaa' }}>{v}</div>
+    </div>
+  ))}
+</div>
+
+## Spacing
+
+<ul>
+  {Object.entries(lightTheme.spacing).map(([k, v]) => (
+    <li key={k}>
+      <code>{k}</code> — <code>{v}</code>
+    </li>
+  ))}
+</ul>
+
+## Typography
+
+- Family: <code>{lightTheme.typography.fontFamily}</code>
+- Size: <code>{lightTheme.typography.fontSize}</code>
+- Line height: <code>{lightTheme.typography.lineHeight}</code>
+- Weight: <code>{lightTheme.typography.fontWeight}</code>
+
+

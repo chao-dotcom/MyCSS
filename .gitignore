@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Builds
+/dist/
+/storybook-static/
+*.tsbuildinfo
+
+# Demo app
+/demo-app/dist/
+descMD/
+hosting.txt
+
+# IDE/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*.local
+
+# Coverage
+coverage/
